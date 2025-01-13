@@ -3,17 +3,18 @@ import { FaFacebook, FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 
 export const Connect = () => {
   return (
-    <Box py={8} px={4} bg="gray.100">
+    <Box py={{ base: 6, md: 8 }} px={4} bg="gray.100">
       <Box maxW="container.xl" mx="auto">
-        <Heading size="lg" mb={6}>Connect with Us</Heading>
-        <HStack spacing={4} justify="center">
+        <Heading size={{ base: "md", md: "lg" }} mb={{ base: 4, md: 6 }} textAlign="center">Connect with Us</Heading>
+        <HStack spacing={{ base: 3, md: 4 }} justify="center">
           <IconButton
             as={Link}
             href="#"
             aria-label="Facebook"
             icon={<FaFacebook />}
             colorScheme="facebook"
-            fontSize="20px"
+            fontSize={{ base: "18px", md: "20px" }}
+            size={{ base: "sm", md: "md" }}
           />
           <IconButton
             as={Link}
@@ -21,7 +22,8 @@ export const Connect = () => {
             aria-label="Instagram"
             icon={<FaInstagram />}
             colorScheme="pink"
-            fontSize="20px"
+            fontSize={{ base: "18px", md: "20px" }}
+            size={{ base: "sm", md: "md" }}
           />
           <IconButton
             as={Link}
@@ -29,7 +31,8 @@ export const Connect = () => {
             aria-label="Email"
             icon={<FaEnvelope />}
             colorScheme="red"
-            fontSize="20px"
+            fontSize={{ base: "18px", md: "20px" }}
+            size={{ base: "sm", md: "md" }}
           />
           <IconButton
             as={Link}
@@ -37,7 +40,8 @@ export const Connect = () => {
             aria-label="WhatsApp"
             icon={<FaWhatsapp />}
             colorScheme="whatsapp"
-            fontSize="20px"
+            fontSize={{ base: "18px", md: "20px" }}
+            size={{ base: "sm", md: "md" }}
           />
         </HStack>
       </Box>

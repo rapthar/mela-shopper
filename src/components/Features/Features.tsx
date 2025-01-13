@@ -6,10 +6,15 @@ const Feature = ({ icon, title, description }: { icon: React.ElementType; title:
     align="center" 
     gap={4} 
     flex={1} 
-    borderRight="1px" 
+    borderRight={{ base: 'none', md: '1px' }}
+    borderBottom={{ base: '1px', md: 'none' }}
     borderColor="gray.200" 
-    _last={{ borderRight: 'none' }}
+    _last={{ 
+      borderRight: 'none',
+      borderBottom: 'none'
+    }}
     px={6}
+    py={{ base: 4, md: 0 }}
   >
     <Box 
       bg="orange.100" 
@@ -31,8 +36,11 @@ const Feature = ({ icon, title, description }: { icon: React.ElementType; title:
 export const Features = () => {
   return (
     <Box py={8} bg="white" borderBottom="1px" borderColor="gray.200">
-      <Container maxW="container.xl">
-        <Flex gap={4}>
+      <Container maxW="container.xl" px={4}>
+        <Flex 
+          gap={4} 
+          direction={{ base: 'column', md: 'row' }}
+        >
           <Feature
             icon={FaPercent}
             title="Opportunity Discounts"
